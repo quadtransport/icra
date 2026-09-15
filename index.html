@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuadTransport — Robust Nonprehensile Object Transport with Quadruped Robots</title>
+  <meta name="description" content="Sensitivity-aware trajectory planning and coupled object–robot model predictive control for transporting unsecured objects with quadruped robots. Anonymous submission to ICRA.">
+  <meta name="theme-color" content="#16836d">
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Robust Nonprehensile Object Transport with Quadruped Robots</h1>
+      <p class="authors">Anonymous submission to ICRA</p>
+      <p class="venue">IEEE International Conference on Robotics and Automation</p>
+      <nav class="publication-links" aria-label="Page sections">
+        <a class="button" href="#overview">Overview</a>
+        <a class="button" href="#abstract">Abstract</a>
+        <a class="button" href="#highlights">Highlights</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section overview-section" id="overview" aria-label="Transport overview">
+      <div class="container">
+        <figure class="overview-figure">
+          <img src="static/images/fig1.png" width="1052" height="365" fetchpriority="high" decoding="async" alt="A sequence of four quadruped poses showing an unsecured pink cylindrical payload carried on the robot's back-mounted platform.">
+          <figcaption>A quadruped carries an unsecured object on a back-mounted platform. Coordinated body motion supports transport through frictional contact, without grasping the payload.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="abstract" aria-labelledby="abstract-title">
+      <div class="container text-container">
+        <h2 id="abstract-title">Abstract</h2>
+        <!-- Abstract from the current manuscript; update alongside the paper. -->
+        <div class="abstract">
+          <p>In this paper, we present a robust nonprehensile object transportation framework for quadruped robots. An uncertainty-aware trajectory optimization method generates object motions with minimal closed-loop sensitivity to uncertain parameters. The resulting reference trajectory is tracked using a coupled convex model predictive controller that jointly predicts the CoM dynamics of the quadruped and the payload followed by a whole-body QP that enforces ground reaction constraints. The approach is evaluated through extensive simulations and real world experiments under variations in the object’s inertial parameters. Its performance is compared with fixed orientation straight line trajectories as baseline. The results show that the optimized object motion reduces the sliding by approximately 50% compared with the fixed orientation baseline and 30% compared with the straight line baseline, while also achieving lower robot CoM tracking errors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="highlights" aria-labelledby="highlights-title">
+      <div class="container">
+        <h2 id="highlights-title">Highlights</h2>
+        <div class="highlights">
+          <article class="highlight-card">
+            <p class="highlight-label">Planning</p>
+            <h3>Sensitivity-aware motion</h3>
+            <p>Optimize the object’s reference motion to reduce sensitivity to uncertain payload and contact parameters, within the quadruped’s motion limits.</p>
+          </article>
+          <article class="highlight-card">
+            <p class="highlight-label">Control</p>
+            <h3>Coupled object–robot MPC</h3>
+            <p>Jointly predict robot and payload dynamics and optimize their contact interaction. Whole-body control maps the resulting commands to joint torques.</p>
+          </article>
+          <article class="highlight-card">
+            <p class="highlight-label">Evaluation</p>
+            <h3>Simulation &amp; hardware</h3>
+            <p>Evaluate the full architecture in MuJoCo and test the optimized references on hardware using the robot’s native controller under payload-mass variations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container text-container">      
+      <p>Anonymous supplementary website for an ICRA submission</p>
+    </div>
+  </footer>
+</body>
+</html>

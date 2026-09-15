@@ -1,0 +1,90 @@
+/* Based on samplewebsite's typography, colors, spacing, and components. */
+:root {
+  --ink: #263238;
+  --muted: #5f6b72;
+  --accent: #16836d;
+  --line: #dce1e4;
+  --soft: #f6f7f8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: #fff;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.container { width: 100%; max-width: 1050px; margin: 0 auto; padding: 0 24px; }
+.text-container { max-width: 898px; }
+.hero { padding: 66px 0 26px; text-align: center; }
+h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 49px);
+  line-height: 1.18;
+  letter-spacing: -1.4px;
+  font-weight: 700;
+}
+.project-name { display: block; color: var(--accent); font-size: 1.12em; margin-bottom: 12px; }
+.authors { margin: 24px 0 4px; font-size: 21px; }
+.venue { color: var(--muted); font-size: 16px; }
+.publication-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  background: #30363b;
+  color: #fff;
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 16px;
+  text-decoration: none;
+}
+.button:hover { background: #465057; text-decoration: none; }
+.section { padding: 42px 0; scroll-margin-top: 20px; }
+.section-soft { background: var(--soft); }
+.overview-section { padding: 20px 0 28px; }
+.overview-figure { max-width: 940px; margin: 0 auto; }
+.overview-figure img { display: block; width: 100%; height: auto; }
+figcaption { margin: 18px auto 0; max-width: 780px; font-size: 15px; line-height: 1.6; text-align: center; color: var(--muted); }
+h2 { margin: 0 0 23px; text-align: center; font-size: 30px; line-height: 1.25; letter-spacing: -.5px; }
+h3 { margin: 0 0 9px; line-height: 1.4; }
+p { margin: 0 0 16px; }
+p:last-child { margin-bottom: 0; }
+.abstract { text-align: justify; }
+.highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.highlight-card { padding: 25px 20px; border: 1px solid #e0eae6; border-radius: 12px; background: #f7faf8; text-align: center; }
+.highlight-label { color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+.highlight-card h3 { font-size: 18px; }
+.highlight-card p:not(.highlight-label) { color: var(--muted); font-size: 15px; line-height: 1.6; }
+footer { padding: 30px 0; text-align: center; font-size: 14px; color: var(--muted); }
+footer p { margin: 0 0 6px; }
+.footer-name { font-weight: 700; color: var(--accent); }
+.skip-link { position: absolute; top: -100px; left: 16px; z-index: 10; padding: 10px 16px; background: #fff; }
+.skip-link:focus { top: 12px; }
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .container { padding: 0 20px; }
+  .hero { padding: 40px 0 15px; }
+  h1 { font-size: 33px; letter-spacing: -.7px; }
+  .authors { font-size: 19px; }
+  .venue { font-size: 15px; }
+  .button { padding: 8px 16px; font-size: 15px; }
+  .section { padding: 30px 0; }
+  .overview-section { padding: 15px 0 10px; }
+  h2 { font-size: 26px; }
+  .abstract { text-align: left; }
+  .highlights { grid-template-columns: 1fr; gap: 14px; }
+  .highlight-card { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
